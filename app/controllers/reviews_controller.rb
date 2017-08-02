@@ -35,6 +35,7 @@ class ReviewsController < ApplicationController
     @movie = Movie.find(params[:movie_id])
     @review = Review.find(params[:id])
     @review.destroy
+    redirect_to movie_path(@movie)
   end
 
   private
