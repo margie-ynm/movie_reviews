@@ -1,4 +1,4 @@
-class Model < ActiveRecord::Base
+class Review < ActiveRecord::Base
   belongs_to :movie
 
   validates :description, :presence => true
