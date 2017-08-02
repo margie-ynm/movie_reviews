@@ -1,0 +1,4 @@
+<h1><%= @movie.name %></h1>
+<%= link_to "Return to movie list", movies_path %>
+<p><%= link_to "Edit", edit_movie_path(@movie) %></p>
+<p><%= link_to "Delete", movie_path(@movie), :data => {:confirm => "Are you sure?", :method => "delete"} %></p>
