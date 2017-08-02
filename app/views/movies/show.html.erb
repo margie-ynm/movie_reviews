@@ -8,6 +8,6 @@
 <h3>Reviews:</h3>
 <% @movie.reviews.each do |review| %>
   <p>
-    "<%= link_to review.description, edit_movie_review_path(@movie, review) %>"
+    "<%= link_to review.description, edit_movie_review_path(@movie, review) %>" | <%= link_to "Delete", movie_review_path(@movie, review), :data => {:confirm => "You sure about this?", :method => "delete"} %>
   </p>
 <% end %>
